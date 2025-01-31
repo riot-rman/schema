@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![github](https://img.shields.io/badge/github-ev3nvy/rman--schema-181717?logo=github&style=for-the-badge)][repository]
+[![github](https://img.shields.io/badge/github-riot--rman/schema-181717?logo=github&style=for-the-badge)][repository]
 [![Discord](https://img.shields.io/discord/1007597805956780062?color=5865F2&label=discord&logo=discord&logoColor=FFFFFF&style=for-the-badge)][discord]
 
 </div>
@@ -59,8 +59,8 @@ of this project. Use at your own risk.
 
 <!-- Project links -->
 [discord]: https://discord.gg/5QVVBKBvpQ
-[repository]: https://github.com/ev3nvy/rman-schema
-[repository-releases]: https://github.com/ev3nvy/rman-schema/releases
+[repository]: https://github.com/riot-rman/schema
+[repository-releases]: https://github.com/riot-rman/schema/releases
 
 
 <!-- References -->
