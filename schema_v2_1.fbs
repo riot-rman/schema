@@ -1,0 +1,61 @@
+namespace rman;
+
+table Bundle {
+  id: long;
+  chunks: [Chunk];
+}
+
+table Chunk {
+  id: long;
+  compressed_size: uint;
+  uncompressed_size: uint;
+}
+
+table Directory {
+  id: long = 0;
+  parent_id: long = 0;
+  name: string;
+}
+
+table File {
+  id: long;
+  directory_id: long = 0;
+  size: uint;
+  name: string;
+  tag_bitmask: ulong = 0;
+  unk5: ubyte = 0; // might be byte
+  unk6: ubyte = 0; // might be byte
+  chunk_ids: [long];
+  unk8: ubyte = 0; // might be byte (set to 1 when part of .app on macOS)
+  unk9: ushort = 0; // might be (u)byte or short
+  permissions: ubyte = 0;
+}
+
+table Key {
+  unk0: ushort; // might be short
+  unk1: uint; // might be int
+}
+
+table Tag {
+  id: ubyte;
+  name: string;
+}
+
+table Manifest {
+  bundles: [Bundle];
+  tags: [Tag];
+  files: [File];
+  directories: [Directory];
+  keys: [Key];
+  chunking_params: [ChunkingParam];
+}
+
+table ChunkingParam {
+  unk0: ushort; // this probably either an id or type
+  chunking_version: ubyte;
+  min_chunk_size: uint;
+  chunk_size: uint;
+  max_chunk_size: uint;
+}
+
+root_type Manifest;
